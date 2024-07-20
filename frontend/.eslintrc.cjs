@@ -9,6 +9,9 @@ module.exports = {
     '@vue/eslint-config-typescript',
     '@vue/eslint-config-prettier/skip-formatting'
   ],
+  rules: {
+    'vue/require-component-root': 'off',
+  },
   overrides: [
     {
       files: [
