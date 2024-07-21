@@ -1,22 +1,53 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: HomeView
+      name: 'welcome',
+      component: () => import('../views/home/WelcomeView.vue')
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
-    }
+      path: '/login',
+      name: 'login',
+      component: () => import('../views/home/LoginView.vue')
+    },
+    {
+      path: '/logout',
+      name: 'logout',
+      component: () => import('../views/home/LogoutView.vue')
+    },
+    {
+      path: '/signup',
+      name: 'signup',
+      component: () => import('../views/home/SignupView.vue')
+    },
+    {
+      path: '/notes',
+      name: 'notes.list',
+      component: () => import('../views/notes/ListView.vue')
+    },
+    {
+      path: '/notes/new',
+      name: 'notes.new',
+      component: () => import('../views/notes/NewView.vue')
+    },
+    {
+      path: '/notes/detail',
+      name: 'notes.detail',
+      component: () => import('../views/notes/DetailView.vue')
+    },
+    {
+      path: '/notes/edit',
+      name: 'notes.edit',
+      component: () => import('../views/notes/EditView.vue')
+    },
+    {
+      path: '/notes/delete',
+      name: 'notes.delete',
+      component: () => import('../views/notes/DeleteView.vue')
+    },
   ]
 })
 
