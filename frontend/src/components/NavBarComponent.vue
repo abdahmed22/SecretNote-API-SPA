@@ -14,7 +14,6 @@ import { RouterLink } from "vue-router"
                 <RouterLink to="/login">Login</RouterLink>
                 <RouterLink to="/logout">Logout</RouterLink>
                 <RouterLink to="/signup">Signup</RouterLink>
-                <RouterLink to="/notes/new">NEEEW</RouterLink>
             </ul>
         </nav>
     </header>
@@ -26,19 +25,19 @@ header {
   nav {
     display: flex;
     align-items: center;
-    padding: 25px 16px;
+    padding: 1rem 1rem;
 
     .icon {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 1rem;
       img {
-        max-width: 100px;
-        max-height: 100px;
+        max-width: 10rem;
+        max-height: 10rem;
       }
 
       h1 {
-        font-size: 30px;
+        font-size: 3rem;
         color: #ffffff
       }
     }
@@ -47,7 +46,7 @@ header {
       display: flex;
       flex: 1;
       justify-content: flex-end;
-      gap: 20px;
+      gap: 1rem;
       list-style: none;
 
       a {
