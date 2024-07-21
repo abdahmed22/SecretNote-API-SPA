@@ -14,6 +14,7 @@ import { RouterLink } from "vue-router"
                 <RouterLink to="/login">Login</RouterLink>
                 <RouterLink to="/logout">Logout</RouterLink>
                 <RouterLink to="/signup">Signup</RouterLink>
+                <RouterLink to="/notes/new">NEEEW</RouterLink>
             </ul>
         </nav>
     </header>
