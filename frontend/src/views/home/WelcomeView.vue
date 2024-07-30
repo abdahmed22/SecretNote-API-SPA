@@ -7,8 +7,8 @@ import { RouterLink } from "vue-router"
     <h1>Welcome to secret notes!</h1>
     <p>Create and securely share self-destructing secret notes.</p>
     <ul class="routes">
-      <RouterLink to="/notes/new">New Note</RouterLink>
-      <RouterLink to="/notes">Notes</RouterLink>
+      <RouterLink to="/secret/notes/new">New Note</RouterLink>
+      <RouterLink to="/secret/notes">All Notes</RouterLink>
     </ul>
   </div>
 </template>
@@ -39,8 +39,9 @@ import { RouterLink } from "vue-router"
       background: #07bf9b;
       padding: 1rem 1rem;
       height: 4rem;
-      width: 8rem;
+      width: 9rem;
       font-size: 2rem;
+      text-align: center;
     }
   }
 }

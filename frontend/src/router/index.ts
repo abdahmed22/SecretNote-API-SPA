@@ -24,29 +24,29 @@ const router = createRouter({
       component: () => import('../views/home/SignupView.vue')
     },
     {
-      path: '/notes',
+      path: '/secret/notes',
       name: 'notes.list',
       component: () => import('../views/notes/ListView.vue')
     },
     {
-      path: '/notes/new',
+      path: '/secret/notes/new',
       name: 'notes.new',
       component: () => import('../views/notes/NewView.vue')
     },
     {
-      path: '/notes/detail',
-      name: 'notes.detail',
-      component: () => import('../views/notes/DetailView.vue')
-    },
-    {
-      path: '/notes/edit',
+      path: '/secret/notes/edit/:id',
       name: 'notes.edit',
       component: () => import('../views/notes/EditView.vue')
     },
     {
-      path: '/notes/delete',
+      path: '/secret/notes/delete/:id',
       name: 'notes.delete',
       component: () => import('../views/notes/DeleteView.vue')
+    },
+    {
+      path: '/secret/notes/:id',
+      name: 'notes.detail',
+      component: () => import('../views/notes/DetailView.vue')
     },
   ]
 })
