@@ -1,12 +1,25 @@
-<script setup lang="ts">
-import NoteFormComponent from '../../components/NoteFormComponent.vue'
-</script>
-
 <template>
   <main>
     <NoteFormComponent />
   </main>
 </template>
+
+<script lang="ts">
+  import NoteFormComponent from '../../components/notes/NoteFormComponent.vue'
+
+  export default {
+
+    name: 'NewView',
+    components : {
+      NoteFormComponent,      
+    },
+    setup () {
+
+      return {
+      }
+    },
+  }
+</script>
 
 <style scoped lang="scss">
 main {

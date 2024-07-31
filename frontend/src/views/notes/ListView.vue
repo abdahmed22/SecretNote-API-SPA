@@ -1,11 +1,37 @@
+<template>
+  <main>
+    <div>
+      <h1>These are all the secret notes</h1>
+    </div>
+    <div>
+      <ul  
+      v-for="(note,index) in notes"
+      :key="index"
+      >
+        <NoteListComponent :partial-note="note"/>
+      </ul>
+    </div>
+    <div>
+      <RouterLink to="/">Back</RouterLink>
+    </div>
+  </main>
+</template>
+
 <script lang="ts">
-  import { defineComponent, ref } from 'vue'
-  import NoteListComponent from '../../components/NoteListComponent.vue'
+  
+  import { ref } from 'vue'
+  import NoteListComponent from '../../components/notes/NoteListComponent.vue'
   import type { PartialNote } from '../../types/types';
+  import { RouterLink } from 'vue-router'
 
 
+  export default {
 
-  export default defineComponent({
+    name: 'ListView',
+    components : {
+      NoteListComponent,
+      RouterLink,      
+    },
 
     setup () {
       const notes = ref<PartialNote[]>(
@@ -45,30 +71,10 @@
 
       return {
         notes,
-        NoteListComponent,
       }
     },
-  })
+  }
 </script>
-
-<template>
-  <main>
-    <div>
-      <h1>These are all the secret notes</h1>
-    </div>
-    <div>
-      <ul  
-      v-for="(note,index) in notes"
-      :key="index"
-      >
-        <NoteListComponent :partial-note="note"/>
-      </ul>
-    </div>
-    <div>
-      <RouterLink to="/">Back</RouterLink>
-    </div>
-  </main>
-</template>
 
 <style scoped lang="scss">
 main {

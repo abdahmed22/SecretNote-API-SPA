@@ -1,12 +1,25 @@
-<script setup lang="ts">
-import SigninFormComponent from '../../components/SigninFormComponent.vue'
-</script>
-
 <template>
   <main>
     <SigninFormComponent />
   </main>
 </template>
+
+<script lang="ts">
+  import SigninFormComponent from '../../components/home/SigninFormComponent.vue'
+
+  export default {
+
+    name: 'LoginView',
+    components : {   
+      SigninFormComponent   
+    },
+    setup () {
+
+      return {
+      }
+    },
+  }
+</script>
 
 <style scoped lang="scss">
 main {

@@ -2,11 +2,13 @@
   <Vueform v-bind="vueform" />
 </template>
 
-<script>
+<script lang="ts">
 import { ref } from 'vue'
 
 export default {
-  setup(props, context)
+
+  name: 'SignupFormComponent',
+  setup()
   {
     const vueform = ref({
       size: 'md',
@@ -16,7 +18,7 @@ export default {
         page_title: {
           type: 'static',
           tag: 'h1',
-          content: 'Sign In',
+          content: 'Sign Up',
         },
         divider: {
           type: 'static',
@@ -30,6 +32,10 @@ export default {
           type: 'text',
           placeholder: 'Password',
         },
+        text: {
+          type: 'text',
+          placeholder: 'Confirm password',
+        },
         divider_1: {
           type: 'static',
           tag: 'hr',
@@ -37,9 +43,9 @@ export default {
         register: {
           type: 'button',
           submits: true,
+          buttonLabel: 'Create User',
           full: true,
           size: 'lg',
-          buttonLabel: 'Login',
         },
       },
     })

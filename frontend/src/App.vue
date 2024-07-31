@@ -1,6 +1,19 @@
-<script setup lang="ts">
-import { RouterView } from 'vue-router'
-import NavBarComponent from './components/NavBarComponent.vue'
+<script lang="ts">
+  import NavBarComponent from './components/NavBarComponent.vue'
+
+  export default {
+
+    name: 'App',
+    components : {
+      NavBarComponent,      
+    },
+
+    setup () {
+      return {
+        
+      }
+    }
+  }
 </script>
 
 <template>

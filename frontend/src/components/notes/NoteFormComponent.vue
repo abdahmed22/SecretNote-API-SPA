@@ -2,11 +2,12 @@
   <Vueform v-bind="vueform" />
 </template>
 
-<script>
+<script lang="ts">
 import { ref } from 'vue'
 
 export default {
-  setup(props, context)
+  name: 'NoteFormComponent',
+  setup()
   {
     const vueform = ref({
       size: 'md',

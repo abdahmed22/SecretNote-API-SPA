@@ -1,12 +1,25 @@
-<script setup lang="ts">
-import SignupFormComponent from '../../components/SignupFormComponent.vue'
-</script>
-
 <template>
   <main>
     <SignupFormComponent />
   </main>
 </template>
+
+<script lang="ts">
+  import SignupFormComponent from '../../components/home/SignupFormComponent.vue'
+
+  export default {
+
+    name: 'SignupView',
+    components : { 
+      SignupFormComponent,     
+    },
+    setup () {
+
+      return {
+      }
+    },
+  }
+</script>
 
 <style scoped lang="scss">
 main {

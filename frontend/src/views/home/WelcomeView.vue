@@ -1,7 +1,3 @@
-<script lang='ts' setup>
-import { RouterLink } from "vue-router"
-</script>
-
 <template>
   <div id="home" class="home">
     <h1>Welcome to secret notes!</h1>
@@ -12,6 +8,23 @@ import { RouterLink } from "vue-router"
     </ul>
   </div>
 </template>
+
+<script lang='ts'>
+  import { RouterLink } from 'vue-router'
+
+  export default {
+
+    name: 'WelcomeView',
+    components: {
+      RouterLink,
+    },
+    setup() {
+      return {
+      }
+    },
+  }
+
+</script>
 
 <style lang="scss" scoped>
 .home {

@@ -1,7 +1,3 @@
-<script lang='ts' setup>
-import { RouterLink } from "vue-router"
-</script>
-
 <template>
     <header>
         <nav class="container">
@@ -18,6 +14,23 @@ import { RouterLink } from "vue-router"
         </nav>
     </header>
 </template>
+
+<script lang="ts">
+  import { RouterLink } from 'vue-router'
+
+  export default {
+
+    name: 'NavBarComponent',
+    components: {
+      RouterLink, 
+    },
+    setup () {
+
+      return {
+      }
+    },
+  }
+</script>
 
 <style lang='scss' scoped>
 header {
